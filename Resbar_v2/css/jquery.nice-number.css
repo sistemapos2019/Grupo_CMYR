@@ -1,0 +1,35 @@
+.nice-number {
+    display: inline-flex;
+    justify-content: stretch;
+    margin: 0 5px !important;
+    border-radius: 5px !important;
+}
+
+.nice-number input {
+    vertical-align: middle;
+    -moz-appearance: textfield;
+    box-sizing: content-box;
+    margin: 0;
+    text-align: center;
+    width: 35px !important;
+    border-radius: 5px !important;
+}
+
+.nice-number input::-webkit-inner-spin-button,
+.nice-number input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.nice-button {
+    border-radius: 5px !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

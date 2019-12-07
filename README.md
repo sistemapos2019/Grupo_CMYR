@@ -3,6 +3,9 @@
 - Guerrero Hernández, Celina Elizabeth
 - Sandoval Cortez, Yenifer yamilet 
 
+# Página web del proyecto
+https://sistemapos2019.github.io/Grupo_CMYR/
+
 # Planificación de pruebas del sistema
 El siguiente documento en google Drive contiene el documento del manual de pruebas: 
 https://docs.google.com/document/d/1lfVeGD2VIdSPY8jZI3x1NJ4Ymiehjk9uiqhFx8WXvUw/edit?usp=sharing

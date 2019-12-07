@@ -339,6 +339,7 @@ if (isset($_GET['ordenCobrar'])) {
                 success: function(datos) {
 
                     $("#modalConfirmar").modal("hide");
+                    // alertify.success('Orden cobrada');
 
                 }
             });
@@ -363,8 +364,27 @@ if (isset($_GET['ordenCobrar'])) {
 					// $("#resultados").html("Mensaje: Cargando...");
 				},
 				success: function(datos) {
+                     
+                    if (datos == 'actualizado') {
+                   
+                    Swal.fire({
+                        position: 'center',
+                        type: 'success',
+                        title: 'La orden ha sido cobrada',
+                        showConfirmButton: false,
+                        timer: 1700
+                    });
                     location.href="dashboard.php";
+                }
 
+                if (datos == 'error') {
+                    Swal.fire({
+                        type: 'error',
+                        title: '¡Error!',
+                        text: 'La orden no se ha podido cobrar',
+                       
+                    })   
+                }
 				}
 			});
 

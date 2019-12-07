@@ -24,6 +24,9 @@
 
 <!--    Plugin sweet Alert 2  -->
 <script src="js/sweetalert2.all.min.js"></script>
+<!-- aletify -->
+<script src="css/alertifyjs/alertify.js"></script>
+
 
 </body>
 

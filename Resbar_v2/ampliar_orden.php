@@ -218,6 +218,8 @@ if (isset($_GET['idOrden'])) {
             },
             success: function(datos) {
                 $('.outer_div').load("./ajax/tabla_productos_nuevos_tmp.php");
+                alertify.success('Producto añadido');
+
 
             }
         });
@@ -236,6 +238,7 @@ if (isset($_GET['idOrden'])) {
             data: parametros,
             url:"./ajax/quitarProdTmp.php",
             success:function(r){
+                alertify.error('Producto eliminado');
                 $('.outer_div').load("./ajax/tabla_productos_nuevos_tmp.php");
             }
         });

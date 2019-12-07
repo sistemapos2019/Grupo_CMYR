@@ -361,6 +361,7 @@ if (isset($_GET['orden'])) {
             success: function(datos) {
             load(1);
             $('.outer_div').load("./ajax/modificar_pedido.php");
+            alertify.success('Producto modificado');
 
             }
         });
@@ -385,7 +386,9 @@ if (isset($_GET['orden'])) {
              },
              success: function(datos) {
                  // $("#resultados").html(datos);
+                 alertify.error('Producto eliminado');
                  load(1);
+
              }
          });
      

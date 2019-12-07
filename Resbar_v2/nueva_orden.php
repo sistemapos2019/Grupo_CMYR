@@ -207,13 +207,7 @@ while ($row = mysqli_fetch_array($query)) {
     //enviar datos del producto para insertarlo directamente a la base de datos y luego mostrarlo en la tabla, el proceso se hace en ./ajax/agregar_pedido.php
 	function agregar(id) {
 		var cantidad = parseInt($('#cantidad_' + id).val());
-		//Inicia validacion
-		if (isNaN(cantidad)) {
-			alert('Esto no es un numero');
-			document.getElementById('cantidad_' + id).focus();
-			return false;
-		}
-		
+        if(cantidad>0){
 		//Fin validacion
 		var parametros = {
 			"id": id,
@@ -229,9 +223,11 @@ while ($row = mysqli_fetch_array($query)) {
 			},
 			success: function(datos) {
                 $(".outer_div").html(datos).fadeIn('slow');
+                alertify.success('Producto añadido');
+
 
 			}
-		});
+		});}
 	}
 
     //enviar datos para insertar el comentario e insertar bitacora de productos agregados, el proceso se hace en ./action/finalizar_orden.php y luego regresar al dashboard.php
@@ -278,6 +274,7 @@ while ($row = mysqli_fetch_array($query)) {
              },
              success: function(datos) {
                  // $("#resultados").html(datos);
+                 alertify.error('Producto eliminado');
                  load(1);
              }
          });
